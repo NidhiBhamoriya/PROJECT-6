@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:blanchedalmond;
+}
+.container{
+    height: 305px;
+    width: 235px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;          /*yh isliye diya taki child, container ke under hi rhe h eder uder na jaye*/
+    overflow: hidden         /*   <------ bina iske ap ki border radius di hui nhi dikhai degi*/
+}
+.container img{
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover;
+}
+.container i{
+    font-size: 65px;     /*QUE :apne ne ye soch aki ye icon niche kese a gya jbki img ke rigth*/
+    color: #fff;        /*side ana chahiye tha   ANS: kyo ki hmne photo ko container ki puri 100% width dedihe */
+    position: absolute;         
+    top: 50%;                  
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);        /*scale 0 heart ka size 0 heart nhi dikhega*/
+    /* display: none;   */
+    opacity: 0;          /*  <------ transparency 0   ---> heart nhi dikhega */
+    /* transform: scale(0); <---- tranform property ak bar hi likh skte h isliye scale ko uper likha h*/           
+
+    /*transition: all ease 0.5s; */     /* simple hmara heart dikhega pr 0.5 sec bad m*/
+    transition: transform ease 0.5s;
+}
+ /* scale(0) means icon ka size 0 ho gya to gayb hi krna tha to iski jgh display:none aur bad m 
+ display:initial kr dete 👂pr suno hme heart ka size bad m bda, visible krna h isliye simple scale use 
+ kiya h   -----> BUT BUT hm display:none -----> than display:initial USE KR SKTE h (SCALE ko HTA k)*/
+
+
+ 
